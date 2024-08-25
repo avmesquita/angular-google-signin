@@ -1,0 +1,14 @@
+<table *ngIf="user">
+    <tr>
+        <td rowspan="1">
+            <img class="image-user" [src]="user?.photoUrl">
+        </td>
+        <td><a href="mailto:{{ user?.email }}"><span class="label-user">{{ user?.name }}</span></a></td>
+        <td><input type="button" (click)="signout()" value="Sign Out" /></td>
+    </tr>
+</table>
+<asl-google-signin-button *ngIf="!user" type='standard' size='large' [locale]="'pt'"></asl-google-signin-button>
+
+
+
+
